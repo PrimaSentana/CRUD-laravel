@@ -21,5 +21,9 @@ Route::get('/profile', [PostController::class, 'Profile']);
 Route::get('/post/create', [PostController::class, 'CreatePost']);
 Route::post('/', [PostController::class, 'Store']);
 
+// update
+Route::get('/post/{id}/edit', [PostController::class, 'Edit']);
+Route::put('/post/{id}/update', [PostController::class, 'Update']);
+
 //delete
-Route::delete('/post/{id}/delete', [PostController::class, 'delete']);
+Route::delete('/post/{id}/delete', [PostController::class, 'Delete']);

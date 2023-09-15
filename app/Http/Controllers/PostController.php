@@ -18,6 +18,7 @@ class PostController extends Controller
         return view('profile');
     }
 
+    // create & store
     public function CreatePost() {
         return view('createpost');
     }
@@ -32,7 +33,25 @@ class PostController extends Controller
         return redirect('/post/create',);
     }
 
-    public function delete($id) {
+    // Update
+    public function Edit($id) {
+        $posts = Post::find($id);
+        return view('update', [
+            'posts' => $posts
+        ]);
+    }
+
+    public function Update(Request $request, $id) {
+        $posts = Post::find($id);
+        $posts->judul = $request->judul;
+        $posts->deskripsi = $request->deskripsi;
+        $posts->save();
+        
+        return redirect('/');
+    }
+
+    // delete
+    public function Delete($id) {
         $posts = Post::find($id);
         $posts->delete();
         

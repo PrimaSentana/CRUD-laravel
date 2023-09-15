@@ -24,8 +24,13 @@
                     <div>
                         <p class="font-normal text-gray-700 dark:text-gray-400">{{ $post -> deskripsi }}</p>
                     </div>
-                    <div class="mt-auto pt-2">
-                        <button type="submit">Delete</button>
+                    <div class="flex mt-auto gap-4">
+                        <div class="mt-auto pt-2">
+                            <button type="submit">Delete</button>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="/post/{{ $post -> id }}/edit">Edit</a>
+                        </div>
                     </div>
                 </div>
             </form>
