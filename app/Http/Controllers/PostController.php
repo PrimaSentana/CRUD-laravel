@@ -14,6 +14,10 @@ class PostController extends Controller
         ]);
     }
 
+    public function Profile() {
+        return view('profile');
+    }
+
     public function CreatePost() {
         return view('createpost');
     }
