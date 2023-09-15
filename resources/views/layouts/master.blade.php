@@ -18,7 +18,7 @@
     
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gradient-to-r from-gray-900 to-gray-600 bg-gradient-to-r bg-no-repeat h-screen">
+<body class="from-gray-900 to-gray-600 bg-gradient-to-r bg-no-repeat h-screen">
     @include('components.navbar')
     @yield('content')
 </body>
